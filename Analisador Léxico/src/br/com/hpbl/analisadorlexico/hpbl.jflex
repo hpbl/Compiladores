@@ -19,7 +19,7 @@ e a coluna atual com yycolumn.
 Whitespace      = [\n\t\r\f ]
 Letra           = [a-zA-Z_]
 Digito          = [0-9]
-//Identificador   = {Letra}({Letra}|{Digito})*
+Identificador   = {Letra}({Letra}|{Digito})*
 Inteiro         = {Digito}+
 
 
@@ -29,10 +29,6 @@ Inteiro         = {Digito}+
 /**
 * REGRAS LEXICAS:
 */
-
-{Whitespace}          {System.out.println("Whitespace");}
-//{Identificador}       {System.out.println("Identificador");}
-{Inteiro}             {System.out.println("Literal Inteiro");}
 
 // Palavras reservadas
 "boolean"              {System.out.println("Token boolean");}
@@ -76,6 +72,9 @@ Inteiro         = {Digito}+
 "["               {System.out.println("Token [");}
 "]"               {System.out.println("Token ]");}
 
+{Whitespace}          {System.out.println("Whitespace");}
+{Identificador}       {System.out.println("Identificador");}
+{Inteiro}             {System.out.println("Literal Inteiro");}
 
 . { throw new RuntimeException("Caractere ilegal! '" + yytext() + "' na linha: " + yyline + ", coluna: " + yycolumn); }
 
