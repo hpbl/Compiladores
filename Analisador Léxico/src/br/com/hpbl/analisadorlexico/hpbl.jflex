@@ -73,8 +73,8 @@ Inteiro         = {Digito}+
 "]"               {System.out.println("Token ]");}
 
 {Whitespace}          {System.out.println("Whitespace");}
-{Identificador}       {System.out.println("Identificador");}
-{Inteiro}             {System.out.println("Literal Inteiro");}
+{Identificador}       {System.out.println("Token Identificador ("+yytext()+")");}
+{Inteiro}             {System.out.println("Token Literal Inteiro ("+yytext()+")");}
 
 . { throw new RuntimeException("Caractere ilegal! '" + yytext() + "' na linha: " + yyline + ", coluna: " + yycolumn); }
 
