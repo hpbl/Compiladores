@@ -35,11 +35,11 @@ class AnalisadorLexico {
   private static final String ZZ_CMAP_PACKED = 
     "\11\0\1\1\1\5\1\55\1\1\1\1\22\0\1\1\1\42\4\0"+
     "\1\37\1\0\1\47\1\50\1\6\1\43\1\46\1\44\1\36\1\4"+
-    "\12\3\1\0\1\45\1\40\1\41\3\0\22\2\1\34\7\2\1\53"+
-    "\1\0\1\54\1\0\1\2\1\0\1\13\1\7\1\15\1\24\1\12"+
-    "\1\31\1\33\1\30\1\21\2\2\1\11\1\26\1\14\1\10\1\17"+
-    "\1\2\1\32\1\16\1\23\1\20\1\25\1\27\1\22\1\35\1\2"+
-    "\1\51\1\0\1\52\7\0\1\55\u1fa2\0\1\55\1\55\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
+    "\1\3\11\3\1\0\1\45\1\40\1\41\3\0\22\2\1\34\7\2"+
+    "\1\53\1\0\1\54\1\0\1\2\1\0\1\13\1\7\1\15\1\24"+
+    "\1\12\1\31\1\33\1\30\1\21\2\2\1\11\1\26\1\14\1\10"+
+    "\1\17\1\2\1\32\1\16\1\23\1\20\1\25\1\27\1\22\1\35"+
+    "\1\2\1\51\1\0\1\52\7\0\1\55\u1fa2\0\1\55\1\55\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
 
   /** 
    * Translates characters to character classes
@@ -57,12 +57,12 @@ class AnalisadorLexico {
     "\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24"+
     "\1\25\1\0\11\3\1\26\10\3\1\27\1\30\1\31"+
     "\1\0\4\3\1\32\3\3\1\33\10\3\1\25\2\3"+
-    "\1\34\4\3\1\35\1\36\1\37\7\3\1\40\2\3"+
-    "\1\41\3\3\1\42\1\3\1\43\1\44\1\45\1\3"+
-    "\1\46\1\47\13\0\1\50";
+    "\1\34\4\3\1\35\1\36\1\37\1\40\7\3\1\41"+
+    "\2\3\1\42\1\43\3\3\1\44\1\3\1\45\1\46"+
+    "\1\47\1\3\1\50\1\51\13\0\1\52";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[124];
+    int [] result = new int[126];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -98,14 +98,14 @@ class AnalisadorLexico {
     "\0\u0816\0\u0844\0\134\0\u0872\0\u08a0\0\u08ce\0\134\0\u08fc"+
     "\0\u092a\0\u0958\0\u0986\0\u09b4\0\u09e2\0\u0a10\0\u0a3e\0\56"+
     "\0\u0a6c\0\u0a9a\0\134\0\u0ac8\0\u0af6\0\u0b24\0\u0b52\0\134"+
-    "\0\134\0\134\0\u0b80\0\u0bae\0\u0bdc\0\u0c0a\0\u0c38\0\u0c66"+
-    "\0\u0c94\0\134\0\u0cc2\0\u0cf0\0\134\0\u0d1e\0\u0d4c\0\u0d7a"+
-    "\0\134\0\u0da8\0\134\0\134\0\134\0\u0dd6\0\134\0\134"+
-    "\0\u0e04\0\u0e32\0\u0e60\0\u0e8e\0\u0ebc\0\u0eea\0\u0f18\0\u0f46"+
-    "\0\u0f74\0\u0fa2\0\u0fd0\0\56";
+    "\0\134\0\134\0\134\0\u0b80\0\u0bae\0\u0bdc\0\u0c0a\0\u0c38"+
+    "\0\u0c66\0\u0c94\0\134\0\u0cc2\0\u0cf0\0\134\0\134\0\u0d1e"+
+    "\0\u0d4c\0\u0d7a\0\134\0\u0da8\0\134\0\134\0\134\0\u0dd6"+
+    "\0\134\0\134\0\u0e04\0\u0e32\0\u0e60\0\u0e8e\0\u0ebc\0\u0eea"+
+    "\0\u0f18\0\u0f46\0\u0f74\0\u0fa2\0\u0fd0\0\56";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[124];
+    int [] result = new int[126];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -167,30 +167,30 @@ class AnalisadorLexico {
     "\23\4\22\0\2\4\3\0\3\4\1\124\23\4\22\0"+
     "\2\4\3\0\7\4\1\125\17\4\22\0\2\4\3\0"+
     "\14\4\1\126\12\4\22\0\2\4\3\0\2\4\1\127"+
-    "\24\4\22\0\2\4\3\0\7\4\1\103\17\4\22\0"+
-    "\2\4\3\0\3\4\1\130\23\4\22\0\2\4\3\0"+
-    "\15\4\1\131\11\4\22\0\2\4\3\0\5\4\1\132"+
-    "\21\4\22\0\2\4\3\0\2\4\1\133\24\4\22\0"+
-    "\2\4\3\0\7\4\1\134\17\4\22\0\2\4\3\0"+
-    "\11\4\1\135\15\4\22\0\2\4\3\0\14\4\1\136"+
-    "\12\4\22\0\2\4\3\0\3\4\1\137\23\4\22\0"+
-    "\2\4\3\0\14\4\1\140\12\4\22\0\2\4\3\0"+
-    "\5\4\1\141\21\4\22\0\2\4\3\0\7\4\1\142"+
-    "\17\4\22\0\2\4\3\0\12\4\1\143\14\4\22\0"+
-    "\2\4\3\0\12\4\1\144\14\4\22\0\2\4\3\0"+
-    "\3\4\1\145\23\4\22\0\2\4\3\0\3\4\1\103"+
-    "\23\4\22\0\2\4\3\0\23\4\1\146\3\4\22\0"+
-    "\2\4\3\0\3\4\1\147\23\4\22\0\2\4\3\0"+
-    "\4\4\1\150\22\4\22\0\2\4\3\0\21\4\1\151"+
-    "\5\4\22\0\2\4\3\0\15\4\1\152\11\4\22\0"+
-    "\2\4\3\0\6\4\1\153\20\4\22\0\2\4\3\0"+
-    "\6\4\1\154\20\4\22\0\2\4\3\0\5\4\1\155"+
-    "\21\4\22\0\2\4\3\0\17\4\1\156\7\4\22\0"+
-    "\2\4\3\0\5\4\1\157\21\4\22\0\2\4\3\0"+
-    "\7\4\1\160\17\4\22\0\2\4\3\0\27\4\1\161"+
-    "\27\0\1\162\65\0\1\163\60\0\1\164\70\0\1\165"+
-    "\36\0\1\166\70\0\1\167\44\0\1\170\50\0\1\171"+
-    "\64\0\1\172\43\0\1\173\60\0\1\174\41\0";
+    "\24\4\22\0\2\4\3\0\7\4\1\130\17\4\22\0"+
+    "\2\4\3\0\3\4\1\131\23\4\22\0\2\4\3\0"+
+    "\15\4\1\132\11\4\22\0\2\4\3\0\5\4\1\133"+
+    "\21\4\22\0\2\4\3\0\2\4\1\134\24\4\22\0"+
+    "\2\4\3\0\7\4\1\135\17\4\22\0\2\4\3\0"+
+    "\11\4\1\136\15\4\22\0\2\4\3\0\14\4\1\137"+
+    "\12\4\22\0\2\4\3\0\3\4\1\140\23\4\22\0"+
+    "\2\4\3\0\14\4\1\141\12\4\22\0\2\4\3\0"+
+    "\5\4\1\142\21\4\22\0\2\4\3\0\7\4\1\143"+
+    "\17\4\22\0\2\4\3\0\12\4\1\144\14\4\22\0"+
+    "\2\4\3\0\12\4\1\145\14\4\22\0\2\4\3\0"+
+    "\3\4\1\146\23\4\22\0\2\4\3\0\3\4\1\147"+
+    "\23\4\22\0\2\4\3\0\23\4\1\150\3\4\22\0"+
+    "\2\4\3\0\3\4\1\151\23\4\22\0\2\4\3\0"+
+    "\4\4\1\152\22\4\22\0\2\4\3\0\21\4\1\153"+
+    "\5\4\22\0\2\4\3\0\15\4\1\154\11\4\22\0"+
+    "\2\4\3\0\6\4\1\155\20\4\22\0\2\4\3\0"+
+    "\6\4\1\156\20\4\22\0\2\4\3\0\5\4\1\157"+
+    "\21\4\22\0\2\4\3\0\17\4\1\160\7\4\22\0"+
+    "\2\4\3\0\5\4\1\161\21\4\22\0\2\4\3\0"+
+    "\7\4\1\162\17\4\22\0\2\4\3\0\27\4\1\163"+
+    "\27\0\1\164\65\0\1\165\60\0\1\166\70\0\1\167"+
+    "\36\0\1\170\70\0\1\171\44\0\1\172\50\0\1\173"+
+    "\64\0\1\174\43\0\1\175\60\0\1\176\41\0";
 
   private static int [] zzUnpackTrans() {
     int [] result = new int[4094];
@@ -233,10 +233,10 @@ class AnalisadorLexico {
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
     "\1\0\2\11\3\1\1\11\17\1\1\11\1\1\1\11"+
     "\2\1\13\11\1\1\1\0\22\1\3\11\1\0\21\1"+
-    "\1\11\40\1\13\0\1\11";
+    "\1\11\42\1\13\0\1\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[124];
+    int [] result = new int[126];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -332,7 +332,7 @@ class AnalisadorLexico {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 170) {
+    while (i < 172) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -685,163 +685,171 @@ class AnalisadorLexico {
           case 1: 
             { throw new RuntimeException("Caractere ilegal! '" + yytext() + "' na linha: " + yyline + ", coluna: " + yycolumn);
             }
-          case 41: break;
+          case 43: break;
           case 2: 
             { System.out.println("Whitespace");
             }
-          case 42: break;
+          case 44: break;
           case 3: 
             { System.out.println("Token Identificador ("+yytext()+")");
             }
-          case 43: break;
+          case 45: break;
           case 4: 
             { System.out.println("Token Literal Inteiro ("+yytext()+")");
             }
-          case 44: break;
+          case 46: break;
           case 5: 
             { System.out.println("Token *");
             }
-          case 45: break;
+          case 47: break;
           case 6: 
             { System.out.println("Token .");
             }
-          case 46: break;
+          case 48: break;
           case 7: 
             { System.out.println("Token <");
             }
-          case 47: break;
+          case 49: break;
           case 8: 
             { System.out.println("Token =");
             }
-          case 48: break;
+          case 50: break;
           case 9: 
             { System.out.println("Token !");
             }
-          case 49: break;
+          case 51: break;
           case 10: 
             { System.out.println("Token +");
             }
-          case 50: break;
+          case 52: break;
           case 11: 
             { System.out.println("Token -");
             }
-          case 51: break;
+          case 53: break;
           case 12: 
             { System.out.println("Token ;");
             }
-          case 52: break;
+          case 54: break;
           case 13: 
             { System.out.println("Token ,");
             }
-          case 53: break;
+          case 55: break;
           case 14: 
             { System.out.println("Token (");
             }
-          case 54: break;
+          case 56: break;
           case 15: 
             { System.out.println("Token )");
             }
-          case 55: break;
+          case 57: break;
           case 16: 
             { System.out.println("Token {");
             }
-          case 56: break;
+          case 58: break;
           case 17: 
             { System.out.println("Token }");
             }
-          case 57: break;
+          case 59: break;
           case 18: 
             { System.out.println("Token [");
             }
-          case 58: break;
+          case 60: break;
           case 19: 
             { System.out.println("Token ]");
             }
-          case 59: break;
+          case 61: break;
           case 20: 
             { System.out.print(yytext());
             }
-          case 60: break;
+          case 62: break;
           case 21: 
             { System.out.println("Comentário");
             }
-          case 61: break;
+          case 63: break;
           case 22: 
             { System.out.println("Token if");
             }
-          case 62: break;
+          case 64: break;
           case 23: 
             { System.out.println("Token &&");
             }
-          case 63: break;
+          case 65: break;
           case 24: 
             { System.out.println("Token ==");
             }
-          case 64: break;
+          case 66: break;
           case 25: 
             { System.out.println("Token !=");
             }
-          case 65: break;
+          case 67: break;
           case 26: 
-            { System.out.println("Token false");
+            { System.out.println("Token new");
             }
-          case 66: break;
+          case 68: break;
           case 27: 
             { System.out.println("Token int");
             }
-          case 67: break;
+          case 69: break;
           case 28: 
             { System.out.println("Token else");
             }
-          case 68: break;
-          case 29: 
-            { System.out.println("Token true");
-            }
-          case 69: break;
-          case 30: 
-            { System.out.println("Token void");
-            }
           case 70: break;
-          case 31: 
-            { System.out.println("Token main");
+          case 29: 
+            { System.out.println("Token this");
             }
           case 71: break;
-          case 32: 
-            { System.out.println("Token class");
+          case 30: 
+            { System.out.println("Token true");
             }
           case 72: break;
-          case 33: 
-            { System.out.println("Token while");
+          case 31: 
+            { System.out.println("Token void");
             }
           case 73: break;
-          case 34: 
-            { System.out.println("Token length");
+          case 32: 
+            { System.out.println("Token main");
             }
           case 74: break;
-          case 35: 
-            { System.out.println("Token static");
+          case 33: 
+            { System.out.println("Token class");
             }
           case 75: break;
-          case 36: 
-            { System.out.println("Token public");
+          case 34: 
+            { System.out.println("Token while");
             }
           case 76: break;
-          case 37: 
-            { System.out.println("Token return");
+          case 35: 
+            { System.out.println("Token false");
             }
           case 77: break;
-          case 38: 
-            { System.out.println("Token boolean");
+          case 36: 
+            { System.out.println("Token length");
             }
           case 78: break;
-          case 39: 
-            { System.out.println("Token extends");
+          case 37: 
+            { System.out.println("Token static");
             }
           case 79: break;
-          case 40: 
-            { System.out.println("Token System.out.println");
+          case 38: 
+            { System.out.println("Token public");
             }
           case 80: break;
+          case 39: 
+            { System.out.println("Token return");
+            }
+          case 81: break;
+          case 40: 
+            { System.out.println("Token boolean");
+            }
+          case 82: break;
+          case 41: 
+            { System.out.println("Token extends");
+            }
+          case 83: break;
+          case 42: 
+            { System.out.println("Token System.out.println");
+            }
+          case 84: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

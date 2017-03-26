@@ -7,7 +7,7 @@ public class LinguagemTeste {
 
     public static void main(String[] args) throws IOException {
 
-        String expr = "//2 + 3+ true loL3 \n 2+ 2";
+        String expr = "01";
 
         AnalisadorLexico lexical = new AnalisadorLexico(new StringReader(expr));
         lexical.yylex();

@@ -23,6 +23,7 @@ package br.com.hpbl.analisadorlexico;
 Whitespace          = [\n\t\r\f ]
 Letra               = [a-zA-Z_]
 Digito              = [0-9]
+DigitoSemZero       = [1-9]
 Identificador       = {Letra}({Letra}|{Digito})*
 Inteiro             = {Digito}+
 AbreComentario      = \/\/
@@ -52,8 +53,8 @@ Comentario          = ({AbreComentario}{ConteudoComentario})|("/*"~"*/")
 "length"               {System.out.println("Token length");}
 "true"                 {System.out.println("Token true");}
 "false"                {System.out.println("Token false");}
-"this"                 {System.out.println("Token false");}
-"new"                  {System.out.println("Token false");}
+"this"                 {System.out.println("Token this");}
+"new"                  {System.out.println("Token new");}
 "System.out.println"   {System.out.println("Token System.out.println");}
 
 // Operadores
