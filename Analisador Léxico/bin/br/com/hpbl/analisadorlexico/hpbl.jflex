@@ -2,26 +2,32 @@ package br.com.hpbl.analisadorlexico;
 
 %%
 
-/* 
-A linha atual pode ser acessada por yyline 
-e a coluna atual com yycolumn. 
-*/ 
+//A linha atual pode ser acessada por yyline e a coluna atual com yycolumn. 
+ 
 %line
 %column
 
-%class AnalisadorLexico
-%type void
+//encoding
+%unicode
 
-/*-*
-* PADROES NOMEADOS:
+
+// faz com que a classe tenha uma função main e torna possivel que a classe gerada seja usada como reconhecedor
+%standalone
+
+%class AnalisadorLexico
+
+/*
+ PADROES NOMEADOS:
 */
 
-Whitespace      = [\n\t\r\f ]
-Letra           = [a-zA-Z_]
-Digito          = [0-9]
-Identificador   = {Letra}({Letra}|{Digito})*
-Inteiro         = {Digito}+
-
+Whitespace          = [\n\t\r\f ]
+Letra               = [a-zA-Z_]
+Digito              = [0-9]
+Identificador       = {Letra}({Letra}|{Digito})*
+Inteiro             = {Digito}+
+AbreComentario      = \/\/
+ConteudoComentario  = [^\n]*
+Comentario          = ({AbreComentario}{ConteudoComentario})|("/*"~"*/") 
 
 %%
 
@@ -75,6 +81,7 @@ Inteiro         = {Digito}+
 {Whitespace}          {System.out.println("Whitespace");}
 {Identificador}       {System.out.println("Token Identificador ("+yytext()+")");}
 {Inteiro}             {System.out.println("Token Literal Inteiro ("+yytext()+")");}
+{Comentario}          {System.out.println("Comentário");}
 
 . { throw new RuntimeException("Caractere ilegal! '" + yytext() + "' na linha: " + yyline + ", coluna: " + yycolumn); }
 
